@@ -1,4 +1,6 @@
-﻿using Terraria;
+﻿using Microsoft.Xna.Framework;
+using System;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -23,18 +25,15 @@ namespace BeeBrosMod.Projectiles
         }
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
-            base.OnHitNPC(target, damage, knockback, crit);
             target.AddBuff(BuffID.Poisoned, 400);
-            if (target.poisoned)
+            /* if (target.HasBuff(BuffID.Poisoned))
             {
-                float projectilespeedX = 0;
-                float projectilespeedY = 0;
-                float projectileKnockBack = 0;
-                int projectiledamage = 15;
+                float 
                 {
-                    Projectile.NewProjectile(target.position.X, target.position.Y, projectilespeedX, projectilespeedY, mod.ProjectileType("ToxicFlask"), projectiledamage, projectileKnockBack, projectile.owner, 0, 0);
+                    //cannot figure out how for the life of me to get the fucking arrow on hit to spawn a new projectile on the hit target, ive been through like 5 different solutions.
+                    Projectile.NewProjectileDirect(Vector2.Equals(0, 0), Vector2.Equals(0, 0), mod.ProjectileType("ToxicFlask"), damage, knockback, Main.myPlayer);
                 }
-            }
+            }*/
         }
 
 
