@@ -1,3 +1,0 @@
-displayName = The Official TheBoys Mod
-author = wiibros220
-version = 0.0.0.1
