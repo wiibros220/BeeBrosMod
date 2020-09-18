@@ -19,8 +19,8 @@ namespace BeeBrosMod.Items
             item.crit = 21;
             item.shoot = mod.ProjectileType("LeArrow");
             item.shootSpeed = 15;
-            item.width = 40;
-            item.height = 40;
+            item.width = 16;
+            item.height = 32;
             item.useTime = 25;
             item.useAnimation = 20;
             item.useStyle = 5;
