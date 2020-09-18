@@ -49,7 +49,7 @@ namespace BeeBrosMod.Items
                 type = mod.ProjectileType("LeArrow"); // or ProjectileID.FireArrow;
             }
 
-            return false;
+            return true;
         }
 
     }
