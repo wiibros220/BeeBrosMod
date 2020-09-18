@@ -29,7 +29,7 @@ namespace BeeBrosMod.Projectiles
              if (crit == true)
             {
                 float projectilespeedX = 0;
-                float projectilespeedY = 0;
+                float projectilespeedY = 1;
                 float projectileknockback = 0;
                 int projectiledamage = 10;
                 //cannot figure out how for the life of me to get the fucking arrow on hit to spawn a new projectile on the hit target, ive been through like 5 different solutions.
