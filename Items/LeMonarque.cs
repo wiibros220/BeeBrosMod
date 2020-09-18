@@ -15,7 +15,8 @@ namespace BeeBrosMod.Items
         public override void SetDefaults()
         {
             item.ranged = true;
-            item.damage = 25;
+            item.damage = 15;
+            item.crit = 21;
             item.shoot = mod.ProjectileType("LeArrow");
             item.shootSpeed = 15;
             item.width = 40;

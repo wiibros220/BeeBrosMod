@@ -15,7 +15,8 @@ namespace BeeBrosMod.Items
 		public override void SetDefaults() 
 		{
 			item.damage = 10;
-			item.shoot = 1;
+			item.crit = 31;
+			item.shoot = ProjectileID.WoodenArrowFriendly;
 			item.shootSpeed = 10;
 			item.melee = true;
 			item.width = 30;
