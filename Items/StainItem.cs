@@ -13,6 +13,10 @@ namespace BeeBrosMod.Items
 
         public override void SetDefaults()
         {
+            item.damage = 400;
+            item.ranged = true;
+            item.shoot = mod.ProjectileType("StainBoolet");
+            item.shootSpeed = 10;
             item.width = 20;
             item.useStyle = 5;
             item.height = 20;

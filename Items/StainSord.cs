@@ -13,6 +13,7 @@ namespace BeeBrosMod.Items
 
 		public override void SetDefaults() 
 		{
+			item.shootSpeed = 15;
 			item.damage = 50;
 			item.melee = true;
 			item.width = 40;
