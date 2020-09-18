@@ -1,6 +1,8 @@
 ﻿using BeeBrosMod.Projectiles;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using Terraria;
 
 namespace BeeBrosMod.Items
 {
@@ -17,6 +19,7 @@ namespace BeeBrosMod.Items
             item.ranged = true;
             item.damage = 15;
             item.crit = 21;
+            item.useAmmo = AmmoID.Arrow;
             item.shoot = mod.ProjectileType("LeArrow");
             item.shootSpeed = 15;
             item.width = 16;
@@ -39,5 +42,15 @@ namespace BeeBrosMod.Items
             recipe.SetResult(this);
             recipe.AddRecipe();
         }
+        public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+        {
+            if (type == ProjectileID.WoodenArrowFriendly) // or ProjectileID.WoodenArrowFriendly
+            {
+                type = mod.ProjectileType("LeArrow"); // or ProjectileID.FireArrow;
+            }
+
+            return false;
+        }
+
     }
 }
