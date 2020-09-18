@@ -25,7 +25,7 @@ namespace BeeBrosMod.Projectiles
         }
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
-            target.AddBuff(BuffID.Poisoned, 400);
+            target.AddBuff(BuffID.Poisoned, 600);
              if (crit == true)
             {
                 float projectilespeedX = 0;
