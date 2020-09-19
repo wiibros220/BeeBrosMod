@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
 using Terraria.Audio;
 
 namespace BeeBrosMod.Items
@@ -23,20 +24,20 @@ namespace BeeBrosMod.Items
             item.ranged = true;
             item.damage = 60;
             item.crit = 10;
+            item.useAmmo = mod.ItemType("NousagiItem");
             item.shoot = mod.ProjectileType("Nousagi");
             item.shootSpeed = 10;
             item.width = 40;
             item.height = 40;
-            item.useTime = 35;
-            item.useAnimation = 35;
+            item.useTime = 30;
+            item.useAnimation = 30;
             item.useStyle = 5;
             item.knockBack = 6;
             item.value = 10;
             item.rare = 5;
-            item.UseSound = SoundID.Item39;
+            item.UseSound = SoundID.Item95;
             item.autoReuse = true;
-
-
+            item.noMelee = true;
         }
 
         public override void AddRecipes()
