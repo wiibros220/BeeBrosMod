@@ -5,11 +5,11 @@
 
 # User-specific files
 *.rsuser
-.suo
+*.suo
 *.user
 *.userosscache
 *.sln.docstates
-.dtbcache.v2
+*.dtbcache.v2
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs

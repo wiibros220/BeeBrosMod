@@ -18,7 +18,7 @@ namespace BeeBrosMod.Items
         {
             item.damage = 400;
             item.ranged = true;
-            item.shoot = mod.ProjectileType("StainBoolet");
+            item.shoot = 10;
             item.shootSpeed = 10;
             item.width = 20;
             item.scale = 1f;
@@ -31,6 +31,7 @@ namespace BeeBrosMod.Items
             item.maxStack = 1;
             item.value = 100;
             item.rare = 5;
+            item.UseSound = SoundID.Item38;
             item.useAmmo = AmmoID.Bullet;
             // Set other item.X values here
         }
@@ -45,20 +46,21 @@ namespace BeeBrosMod.Items
             recipe.AddRecipe();
         }
 
+        public override Vector2? HoldoutOffset()
+        {
+            return new Vector2(-8, 0);
+        }
+
         // What if I wanted it to shoot like a shotgun?
         // Shotgun style: Multiple Projectiles, Random spread
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
 
-            if (type == ProjectileID.Bullet) // or ProjectileID.WoodenArrowFriendly
-            {
-                type = mod.ProjectileType("StainBoolet"); // or ProjectileID.FireArrow;
-            }
 
             int numberProjectiles = 4 + Main.rand.Next(2); // 4 or 5 shots
 			for (int i = 0; i < numberProjectiles; i++)
 			{
-				Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(30)); // 30 degree spread.
+				Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(10)); // 30 degree spread.
 				// If you want to randomize the speed to stagger the projectiles
 				// float scale = 1f - (Main.rand.NextFloat() * .3f);
 				// perturbedSpeed = perturbedSpeed * scale; 
