@@ -34,7 +34,7 @@ namespace BeeBrosMod.Items
             item.useStyle = 5;
             item.knockBack = 6;
             item.value = 10;
-            item.rare = 5;
+            item.rare = ItemRarityID.Red;
             item.UseSound = SoundID.Item95;
             item.autoReuse = true;
             item.noMelee = true;

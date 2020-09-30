@@ -25,7 +25,19 @@ namespace BeeBrosMod.Items.Ammo
             item.shoot = mod.ItemType("Nousagi");
             item.maxStack = 999;
             item.consumable = true;
+            item.rare = ItemRarityID.Pink;
         }
-        
+
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ItemID.Bunny, 1);
+            recipe.AddIngredient(ItemID.Grenade, 10);
+
+
+            recipe.AddTile(TileID.WorkBenches);
+            recipe.SetResult(this, 50);
+            recipe.AddRecipe();
+        }
     }
 }
