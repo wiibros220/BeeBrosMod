@@ -26,6 +26,7 @@ namespace BeeBrosMod.Items.Ammo
             item.maxStack = 999;
             item.consumable = true;
             item.rare = ItemRarityID.Pink;
+            item.damage = 10;
         }
 
         public override void AddRecipes()
