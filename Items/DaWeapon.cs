@@ -24,18 +24,18 @@ namespace BeeBrosMod.Items
             item.ranged = true;
             item.width = 36;
             item.height = 22;
-            item.useTime = 19;
-            item.useAnimation = 20;
+            item.useTime = 5;
+            item.useAnimation = 5;
             item.useStyle = 5;
             item.noMelee = true;
             item.knockBack = 4;
             item.value = 10000;
             item.rare = 2;
-            item.UseSound = SoundID.Item98;
+            item.UseSound = SoundID.Item5;
             item.autoReuse = true;
-            item.shoot = 10;
+            item.shoot = mod.ProjectileType("rabbitRee");
             item.shootSpeed = 18f;
-            item.useAmmo = AmmoID.Bullet;
+            //item.useAmmo = AmmoID.Bullet;
         }
 
         public override void AddRecipes()

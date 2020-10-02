@@ -47,7 +47,7 @@ namespace BeeBrosMod.Projectiles
 
             projectile.rotation += 0.4f * (float)projectile.direction;
 
-            Dust.NewDust(projectile.position + projectile.velocity, projectile.width, projectile.height, 15, projectile.velocity.X * -0.5f, projectile.velocity.Y * -0.5f);
+            //Dust.NewDust(projectile.position + projectile.velocity, projectile.width, projectile.height, 15, projectile.velocity.X * -0.5f, projectile.velocity.Y * -0.5f);
         }
 
         public override void OnHitNPC(Terraria.NPC target, int damage, float knockback, bool crit)
